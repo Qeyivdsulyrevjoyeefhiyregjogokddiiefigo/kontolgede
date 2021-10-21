@@ -40,7 +40,7 @@ const starts = async (zeroyt7 = new WAConnection()) => {
         start('2', 'Menghubungkan...')
     })
     zeroyt7.on('open', () => {
-        success('2', 'Terhubung Jangan Lupa Subscribe Herman Chanel')
+        success('2', 'Terhubung JANGAN LUPA SHOLAT KAWAND')
     })
     await zeroyt7.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./zeroyt7.json', JSON.stringify(zeroyt7.base64EncodedAuthInfo(), null, '\t'))
@@ -70,7 +70,7 @@ zeroyt7.on("group-participants-update", async (anu) => {
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60"
       }
       if (anu.action == "add" && mem.includes(zeroyt7.user.jid)) {
-        zeroyt7.sendMessage(anu.jid, "Halo!.. saya Herman Bot saya akan membatu mempermudah kehidupan..seperti membuat sticker dan lain-lain. untuk meulai silahkan ketik !menu.", "conversation")
+        zeroyt7.sendMessage(anu.jid, "𝙷𝚊𝚕𝚕𝚘 𝚂𝚎𝚖𝚞𝚊 !... 𝚂𝚊𝚢𝚊 𝙰𝚍𝚊𝚕𝚊𝚑 𝚁𝚎𝚝𝚎𝚊𝚖.𝚒𝚍  𝚃𝚞𝚓𝚞𝚊𝚗 𝚂𝚊𝚢𝚊 𝙳𝚒𝚜𝚒𝚗𝚒 𝚄𝚗𝚝𝚞𝚔 𝙼𝚎𝚖𝚋𝚊𝚗𝚝𝚞 𝙼𝚎𝚗𝚐𝚑𝚒𝚋𝚞𝚛 𝚂𝚎𝚙𝚎𝚛𝚝𝚒 𝙱𝚊𝚍𝚞𝚝", "conversation")
       }
       if (!isWelkom) return
       if (anu.action == "add" && !mem.includes(zeroyt7.user.jid)) {
@@ -80,7 +80,7 @@ zeroyt7.on("group-participants-update", async (anu) => {
         let v = zeroyt7.contacts[num] || { notify: num.replace(/@.+/, "") }
         anu_user = v.vname || v.notify || num.split("@")[0]
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm")
-        wel = `Halo @${anu_user} \nWelcome In ${mdata.subject} \nJangan Lupa Subscribe Gan\n• Dapet Pahala : https://youtube.com/channel/UCPhU6uA_3gUaEvyrFZFgJqg`
+        wel = ` ☘︎ 𝗪 𝗘 𝗟 𝗖 𝗢 𝗠 𝗘 ☘︎  \n \n 👑 : @${anu_user} \n 🎄 : ${mdata.subject} \n ✔︎  : not verify \n 🔥 : no premium \n \n 𝙵𝚘𝚕𝚕𝚘𝚠 𝙸𝙶 : https://www.instagram.com/reteam.id/ `
         buff = await getBuffer(
           `http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
@@ -89,9 +89,9 @@ zeroyt7.on("group-participants-update", async (anu) => {
         )
 
         but = [
-          { buttonId: 'add', buttonText: { displayText: 'Welcome Member Baru' }, type: 1 }
+          { buttonId: 'add', buttonText: { displayText: 'Selamat Datang Kack 👋🏻 ' }, type: 1 }
         ]
-        sendButImage(mdata.id, wel, "©Created : Herman Botz", buff, but)
+        sendButImage(mdata.id, wel, "☕︎𝙵𝚘𝚕𝚕𝚘𝚠 𝙸𝙶 𝚛𝚎𝚝𝚎𝚊𝚖.𝚒𝚍☕︎", buff, but)
       }
       if (!isWelkom) return
       if (anu.action == "remove" && !mem.includes(zeroyt7.user.jid)) {
@@ -101,7 +101,7 @@ zeroyt7.on("group-participants-update", async (anu) => {
         anu_user = w.vname || w.notify || num.split("@")[0]
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm")
         memeg = mdata.participants.length
-        out = `Mari Kita Doakan Bersama-Sama Buat Yang Keluar \nSayonara @${anu_user} Semoga Tenang Di Alam Sana`
+        out = `Mari Kita Doakan Bersama-Sama Buat Yang Keluar \n \n Sayonara👋🏻 @${anu_user} Semoga Tenang Di Alam Sana`
         buff = await getBuffer(
           `http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
@@ -110,9 +110,9 @@ zeroyt7.on("group-participants-update", async (anu) => {
         )
 
         but = [
-          { buttonId: 'remove', buttonText: { displayText: 'Selamat Tinggal' }, type: 1 }
+          { buttonId: 'remove', buttonText: { displayText: 'Si Yteam Keluar 😓' }, type: 1 }
         ]
-        sendButImage(mdata.id, out, "©Created : Herman Botz", buff, but)
+        sendButImage(mdata.id, out, "☕︎𝙵𝚘𝚕𝚕𝚘𝚠 𝙸𝙶 𝚛𝚎𝚝𝚎𝚊𝚖.𝚒𝚍☕︎", buff, but)
       }
       if (anu.action == "promote") {
         const mdata = await zeroyt7.groupMetadata(anu.jid)
