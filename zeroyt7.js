@@ -228,8 +228,8 @@ const adyt = {
                             itemCount : 123,
                             status: 1,
                             surface : 1,
-                            message: `SUBSCRIBE Herman Chanel`, 
-                            orderTitle: `SUBSCRIBE Herman Chanel`,
+                            message: `Support reteam.id`, 
+                            orderTitle: `Support reteam.id`,
                             thumbnail: zero, //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
@@ -327,30 +327,38 @@ switch (command) {
 	case 'menu':
 	case 'help':
 teks = `Hai ${pushname} 👋
-Saya ${botname} Whatsapp yang membantu mempermudahkan sesuatu seperti membuat stiker dan lainnya, butuh info dariku ?`
-img = fs.readFileSync('./zeroyt7/zero.jpg')
-trans = `Note : kalau kamu wa lama atau mod, dan button ga keliatan, langsung aja ketik allmenu`
-but = [
-          { buttonId: `${prefix}allmenu`, buttonText: { displayText: 'Menu 🎟️' }, type: 1 },
-          { buttonId: `${prefix}sewabot`, buttonText: { displayText: 'Sewa 💲' }, type: 1 },
-          { buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner 👑' }, type: 1 }
-        ]
-        sendButImage(from, teks, trans, img, but)
-break
-	case 'allmenu':
-	menunya = `
-	𖣘 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𖣘
-	
-	┏━━°☢︎︎❬ *𝙸𝙽𝙵𝙾 𝙾𝚆𝙽𝙴𝚁* ❭☢︎︎°━━┓   
+Saya ${botname}  yang membantu menghibur seperti badut 
 
-	┣➥ 𝚈𝚃 : https://youtu.be/s1yUhMyqIYg
-	┣➥ 𝙸𝙶 : https://www.instagram.com/reteam.id/
-    ┣➥ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt
+
+       𖣘 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𖣘
+
+┏━━°☢︎︎❬ *𝙸𝙽𝙵𝙾 𝙾𝚆𝙽𝙴𝚁* ❭☢︎︎°━━┓   
+
+┣➥ 𝚈𝚃 :
+ https://youtu.be/s1yUhMyqIYg
+
+┣➥ 𝙸𝙶 :
+ https://www.instagram.com/reteam.id/
+
+┣➥ 𝙶𝙲 𝙱𝙾𝚃 : 
+https://bit.ly/3zWEnWt
    
- ━━━━━━━━━━━━━━━━━━━━━
-	
-	
-	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
+ ━━━━━━━━━━━━━━━━━━━━━
+
+
+┏━━°☯︎❬ *𝙸𝙽𝙵𝙾 𝙱𝙾𝚃* ❭☯︎°━━┓   
+┣➥රඩරඩරඩරඩරඩරඩරඩරඩරඩරඩ
+රඩරඩරඩරඩරඩරඩරඩරඩරඩරඩරඩ
+┣➥ රඩරඩරඩරඩරඩරඩරඩරඩරඩරඩ
+රඩරඩරඩරඩරඩරඩරඩරඩරඩරඩරඩ
+┣➥ රඩරඩරඩරඩරඩරඩරඩරඩරඩරඩ
+   ᴛᴜᴊᴜᴀɴ ᴛᴇᴋs ᴅɪᴀᴛᴀs ᴀᴅᴀʟᴀʜ ʏᴀɴɢ ᴛɪᴅᴀᴋ ᴛᴀᴜ ᴍᴇɴᴊᴀᴅɪ ᴛᴀᴜ ,
+   ʏᴀɴɢ ᴛᴀᴜ ᴍᴇɴᴊᴀᴅɪ ᴛɪᴅᴀᴋ ᴛᴀᴜ , ᴄᴇᴋ sᴇɢᴇʀᴀ  ᴄᴇʟᴀɴᴀ ᴀɴᴅᴀ
+   ᴅᴀɴ ᴍᴀsᴜᴋᴀɴ ᴋᴀɴᴅᴀɴɢ sᴇᴍᴜᴛ!𖨆
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ☘︎❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭☘︎
 	
 	
 	 ☀︎︎ Group Menu ☀︎︎
@@ -474,9 +482,29 @@ break
     *٬࿊⃟👑* ${prefix}sewabot
 	*٬࿊⃟👑* ${prefix}bc
 	*٬࿊⃟👑* ${prefix}report
-	
+
 `
-	zeroyt7.sendMessage(from, menunya, text, {quoted: ftrol})
+img = fs.readFileSync('./zeroyt7/zero.jpg')
+trans = `Note : menu eror / button tidak ada? , langsung aja ketik .allmenu`
+but = [
+          { buttonId: `${prefix}allmenu`, buttonText: { displayText: 'Menu 🎟️' }, type: 1 },
+          { buttonId: `${prefix}sewabot`, buttonText: { displayText: 'Sewa 💲' }, type: 1 },
+          { buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner 👑' }, type: 1 }
+        ]
+        sendButImage(from, teks, trans, img, but)
+break
+	case 'allmenu':
+	menunya = `
+	NGETWS BANGA
+
+`
+img = fs.readFileSync('./zeroyt7/zero.jpg')
+trans = `Note : menu eror / button tidak ada? , langsung aja ketik .allmenu`
+but = [
+{ buttonId: '!sewabot', buttonText: { displayText: 'Rent 💸' }, type: 1 },
+{ buttonId: '!owner', buttonText: { displayText: 'Owner 👑' }, type: 1 }
+]
+sendButImage(from, teks, trans, img, but)
                   break
 	
 //━━━━━━━━━━━━━━━[ FITUR GROUP ]━━━━━━━━━━━━━━━━━//
@@ -758,7 +786,7 @@ reply(mess.error.stick)
 .on('end', function () {
 console.log('Finish')
 buffer = fs.readFileSync(ran)
-costum(buffer, sticker, Verived, `Jangan Lupa Subscribe Herman Chanel`)
+costum(buffer, sticker, Verived, `Follow ig https://www.instagram.com/reteam.id/`)
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -823,7 +851,7 @@ exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply(' Gagal, pada saat mengkonversi sticker ke gambar ')
 buffer = fs.readFileSync(ran)
-costum(buffer, image, Verived, `Jangan Lupa Subscribe Herman Chanel`)
+costum(buffer, image, Verived, `Follow https://www.instagram.com/reteam.id/`)
 fs.unlinkSync(ran)
 })
 break
@@ -1553,7 +1581,7 @@ vcard2 = 'BEGIN:VCARD\n'
 zeroyt7.sendMessage(from, {displayName: `Creator ${ownername}`, vcard: vcard2}, contact, 
 { quoted: ftrol, 
 })
-reply('TUHH NOMER JURAGAN KU')
+reply('Jan di spam ya :v')
 break
 case 'bc':
 if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
@@ -1574,6 +1602,9 @@ reply('Suksess broadcast')
 }
 break
 case 'report':
+case 'bug':
+case 'bugreport':
+case 'reportbug':
 const pesan = body.slice(8)
 if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: ftrol })
 var nomor = mek.participant
